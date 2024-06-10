@@ -5,9 +5,9 @@ import MovieCard from "./MovieCard";
 
 // 861465c7 API key OMDb movie data base
 
-const API_URL = 'http://www.omdbapi.com?apikey=861465c7';
+const API_URL ='https://www.omdbapi.com?apikey=861465c7';
 
-const movie1= {
+const movie= {
     
         "Title": "Italian Spiderman",
         "Year": "2007",
@@ -32,7 +32,7 @@ const App = () => {
     }
 
     useEffect(() => {
-        searchMovies('Spiderman');
+        searchMovies('Harry Potter');
     }, []);
 
 
