@@ -35,6 +35,11 @@ const App = () => {
         searchMovies('Harry Potter');
     }, []);
 
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            searchMovies(searchTerm);
+        }
+    };
 
     return (
         <div className="app">
