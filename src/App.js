@@ -35,8 +35,10 @@ const App = () => {
         searchMovies('Harry Potter');
     }, []);
 
-    const handleKeyPress = (e) => {
+    const handleKeyDown = (e) => {
+        console.log('Key pressed:', e.key); // Debugging statement
         if (e.key === 'Enter') {
+            console.log('Enter key pressed'); // Debugging statement
             searchMovies(searchTerm);
         }
     };
@@ -50,6 +52,7 @@ const App = () => {
                   placeholder="Search for movies"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyDown={handleKeyDown}
                 />
                 <img
                  src={SearchIcon}
