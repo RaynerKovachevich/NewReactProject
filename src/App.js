@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import './App.css';
 import SearchIcon from './search.svg';
 import MovieCard from "./MovieCard";
+import NavBar from "./NavBar";
 
 // 861465c7 API key OMDb movie data base
 
@@ -21,6 +22,7 @@ const movie= {
 const App = () => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('')
+    const [genre, setGenre] = useState('All');
 
     const searchMovies = async (tittle) => {
 
@@ -32,7 +34,7 @@ const App = () => {
     }
 
     useEffect(() => {
-        searchMovies('Harry Potter');
+        searchMovies('Movies');
     }, []);
 
     const handleKeyDown = (e) => {
@@ -43,9 +45,15 @@ const App = () => {
         }
     };
 
+    const filterMoviesByGenre = (movies, genre) => {
+        if (genre === "All") return movies;
+        return movies.filter(movie => movie.Genre && movie.Genre.includes(genre));
+    }
+
     return (
         <div className="app">
-            <h1>Rayner Movies</h1>
+              <h1>Rayner Movies</h1>
+            <NavBar setGenre={setGenre} />
 
             <div className="search">
                 <input
@@ -65,7 +73,7 @@ const App = () => {
             {movies?.length > 0
                 ? (
                 <div className="container">
-                    {movies.map((movie) => (
+                    {filterMoviesByGenre(movies, genre).map((movie) => (
                         <MovieCard movie={movie} />
                     ))}
                 </div>

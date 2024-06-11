@@ -17,6 +17,30 @@ body {
   background-color: #212426;
 }
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.navbar button {
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #1f2123;
+    color: #f9d3b4;
+    font-family: var(--font-raleway);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+    background-color: #343739;
+}
+
+
 .app {
   padding: 4rem;
 
