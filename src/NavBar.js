@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
-const NavBar = ({ setGenre }) => {
+
+
+const NavBar = () => {
+    const [showCategories, setShowCategories] = useState(false);
+
+    const handleCategoriesClick = () => {
+        setShowCategories(!showCategories);
+    };
+
     return (
         <div className="navbar">
-            <button onClick={() => setGenre('All')}>All</button>
-            <button onClick={() => setGenre('Action')}>Action</button>
-            <button onClick={() => setGenre('Comedy')}>Comedy</button>
-            <button onClick={() => setGenre('Drama')}>Drama</button>
-            <button onClick={() => setGenre('Horror')}>Horror</button>
-        </div>
-    );
-}
+            <button id="categories-btn" onClick={handleCategoriesClick}>
+                Categories
+            </button>
+            <div id="navbar-buttons" className={`navbar-buttons ${showCategories ? 'show' : ''}`}>
+                <button>Action</button>
+                <button>Comedy</button>
+                <button>Drama</button>
+                <button>Horror</button>
+                <button>Romance</button>
+            </div>
 
+        </div>
+    )
+}
 export default NavBar;

@@ -17,16 +17,19 @@ body {
   background-color: #212426;
 }
 
+
+
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
-.navbar button {
-    padding: 1.5rem 3rem;
+.navbar #categories-btn {
+    padding: 1.5rem 2.0rem;
     border: none;
     border-radius: 15px;
     background-color: #1f2123;
@@ -34,6 +37,38 @@ body {
     font-family: var(--font-raleway);
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+.navbar #categories-btn:hover {
+    background-color: #343739;
+}
+
+.navbar-buttons {
+    display: none;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1.5rem 2.0rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #1f2123;
+    color: #f9d3b4;
+    font-family: var(--font-raleway);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-buttons.show {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    letter-spacing: 0.9px;
+    background: linear-gradient(
+      90deg,
+      rgba(249, 211, 180, 1) 1%,
+      rgba(249, 211, 180, 0) 100%);
+      
+
+    
 }
 
 .navbar button:hover {
@@ -233,6 +268,17 @@ h1 {
     width: 20px;
     height: 20px;
   }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .navbar button {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -251,5 +297,16 @@ h1 {
   .movie {
     width: "100%";
     margin: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .navbar button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
   }
 }
