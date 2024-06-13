@@ -15,11 +15,11 @@ const NavBar = () => {
                 Categories
             </button>
             <div id="navbar-buttons" className={`navbar-buttons ${showCategories ? 'show' : ''}`}>
-                <button>Action</button>
-                <button>Comedy</button>
-                <button>Drama</button>
-                <button>Horror</button>
-                <button>Romance</button>
+                <button className="category-buttons"> Action</button>
+                <button className="category-buttons">Comedy</button>
+                <button className="category-buttons">Drama</button>
+                <button className="category-buttons">Horror</button>
+                <button className="category-buttons">Romance</button>
             </div>
 
         </div>
