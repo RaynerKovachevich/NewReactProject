@@ -3,6 +3,7 @@ import './App.css';
 import SearchIcon from './search.svg';
 import MovieCard from "./MovieCard";
 import NavBar from "./NavBar";
+import logo from "./assets/Newlogo.png";
 
 // 861465c7 API key OMDb movie data base
 
@@ -52,7 +53,7 @@ const App = () => {
 
     return (
         <div className="app">
-              <h1>Rayner Movies</h1>
+               <img src={logo} alt="Logo" className="logo"/>
             <NavBar setGenre={setGenre} />
 
             <div className="search">
