@@ -303,55 +303,13 @@ h1 {
     width: 400px; 
 }
 
-    .category-buttons {
+.navbar #categories-btn{
     padding: 0.6rem 0.9rem; 
-    font-size: 0.7rem; 
+    font-size: 1rem; 
 }
 }
 
 
-
-@media screen and (max-width: 400px) {
-    
-  .app {
-    padding: 4rem 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .container {
-    margin-top: 2rem;
-  }
-
-  .movie {
-    width: "100%";
-    margin: 1rem;
-  }
-
-  .navbar {
-    padding: 0.3rem;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .navbar button {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
-
-  .logo {
-    width: 200px; 
-}
-
-    .category-buttons {
-    padding: 0.6rem 0.9rem; 
-    font-size: 0.6rem; 
-}
-}
 
 @media screen and (max-width: 400px) {
   .app {
@@ -380,15 +338,16 @@ h1 {
 
   .navbar button {
     padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .logo {
     width: 200px; 
 }
 
-    .category-buttons {
-    padding: 0.6rem 0.9rem; 
-    font-size: 0.6rem; 
+.navbar #categories-btn{
+    padding: 0.5rem 0.7rem; 
+    font-size: 1rem; 
 }
 }
+
