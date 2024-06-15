@@ -23,6 +23,10 @@ const NavBar = () => {
             <button id="categories-btn" onClick={handleCategoriesClick}>
                 Login
             </button>
+           
+            <button id="categories-btn" onClick={handleCategoriesClick}>
+                Register
+            </button>
 
             <div id="navbar-buttons" className={`navbar-buttons ${showCategories ? 'show' : ''}`}>
                 <button className="category-buttons"> Action</button>
