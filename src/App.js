@@ -38,7 +38,6 @@ const App = () => {
         searchMovies('Movies');
     }, []);
 
-<<<<<<< HEAD
     const handleKeyDown = (e) => {
         console.log('Key pressed:', e.key); // Debugging statement
         if (e.key === 'Enter') {
@@ -51,13 +50,6 @@ const App = () => {
         if (genre === "All") return movies;
         return movies.filter(movie => movie.Genre && movie.Genre.includes(genre));
     }
-=======
-    const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            searchMovies(searchTerm);
-        }
-    };
->>>>>>> ff80788 ( HendleKey)
 
     return (
         <div className="app">
