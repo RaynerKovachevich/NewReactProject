@@ -313,7 +313,7 @@ h1 {
 
 @media screen and (max-width: 400px) {
   .app {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
   }
 
   h1 {
