@@ -35,7 +35,11 @@ const App = () => {
     }
 
     useEffect(() => {
+<<<<<<< HEAD
         searchMovies('Movies');
+=======
+        searchMovies('Harry Potter');
+>>>>>>> 530f89c (corretion of the https)
     }, []);
 
     const handleKeyDown = (e) => {
