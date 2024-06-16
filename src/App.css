@@ -27,6 +27,16 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: 1.5rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Top-btn.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .navbar {

@@ -24,6 +24,7 @@ const App = () => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('')
     const [genre, setGenre] = useState('All');
+    const [showTopBtn, setShowTopBtn] = useState(false);
 
     const searchMovies = async (tittle) => {
 
@@ -39,9 +40,9 @@ const App = () => {
     }, []);
 
     const handleKeyDown = (e) => {
-        console.log('Key pressed:', e.key); // Debugging statement
+        console.log('Key pressed:', e.key); 
         if (e.key === 'Enter') {
-            console.log('Enter key pressed'); // Debugging statement
+            console.log('Enter key pressed');
             searchMovies(searchTerm);
         }
     };
@@ -50,6 +51,25 @@ const App = () => {
         if (genre === "All") return movies;
         return movies.filter(movie => movie.Genre && movie.Genre.includes(genre));
     }
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth"});
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 20) {
+                setShowTopBtn(true);
+            } else {
+                setShowTopBtn(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div className="app">
@@ -86,8 +106,8 @@ const App = () => {
                     </div>
                 )
             }
-            <div className="Top-btn">
-                <button>Top</button>
+            <div>
+                <button className={`Top-btn ${showTopBtn ? 'show' : ''}`} onClick={scrollToTop}>Top</button>
             </div>
         </div>
     );
