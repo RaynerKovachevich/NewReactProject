@@ -5,10 +5,15 @@ import logo from "./assets/Newlogo.png";
 
 const NavBar = () => {
     const [showCategories, setShowCategories] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
 
     const handleCategoriesClick = () => {
         setShowCategories(!showCategories);
     };
+
+    const handleLoginClick = () => {
+        setShowLogin(!showLogin); 
+    }
 
     return (
         <div className="navbar">
@@ -20,7 +25,7 @@ const NavBar = () => {
                 Categories
             </button>
             
-            <button id="categories-btn" onClick={handleCategoriesClick}>
+            <button id="login-btn" onClick={handleLoginClick}>
                 Login
             </button>
            
@@ -35,6 +40,19 @@ const NavBar = () => {
                 <button className="category-buttons">Horror</button>
                 <button className="category-buttons">Romance</button>
             </div>
+
+            {showLogin && (
+                <div className="login-form">
+                    <form>
+                        <h2>Login</h2>
+                        <label htmlFor="username ">UserName</label>
+                        <input type="text" name="username" />
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name="password" />
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            )}
 
         </div>
     )

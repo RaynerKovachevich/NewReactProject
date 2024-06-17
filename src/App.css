@@ -17,6 +17,7 @@ body {
   background-color: #212426;
 }
 
+
 .Top-btn {
   padding: 1.5rem 2.0rem;
   border: none;
@@ -100,6 +101,72 @@ body {
 
 .navbar button:hover {
     background-color: #343739;
+}
+
+#login-btn {
+  padding: 1.5rem 2.0rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #1f2123;
+  color: #f9d3b4;
+  font-family: var(--font-raleway);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.5rem;
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f2123;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.login-form h2 {
+  color: #f9d3b4;
+  font-family: var(--font-raleway);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login-form label {
+  color: #f9d3b4;
+  font-family: var(--font-raleway);
+  margin-bottom: 0.5rem;
+}
+
+.login-form input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #343739;
+  color: #f9d3b4;
+  font-family: var(--font-raleway);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.login-form button {
+  width: 25%; 
+  padding: 12px;
+  margin-top:20px 20px 10px 10px; 
+  background-color: #343739;
+  color: #f9d3b4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #343739;
 }
 
 
