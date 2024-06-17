@@ -6,13 +6,19 @@ import logo from "./assets/Newlogo.png";
 const NavBar = () => {
     const [showCategories, setShowCategories] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
+    const [showRegister, setShowRegister] = useState(false)
 
     const handleCategoriesClick = () => {
         setShowCategories(!showCategories);
     };
 
     const handleLoginClick = () => {
-        setShowLogin(!showLogin); 
+        setShowLogin(!showLogin);
+    }
+
+    const handleRegister = () => {
+        setShowRegister(!showRegister);
+        setShowLogin(false);
     }
 
     return (
@@ -29,7 +35,7 @@ const NavBar = () => {
                 Login
             </button>
            
-            <button id="categories-btn" onClick={handleCategoriesClick}>
+            <button id="categories-btn" onClick={handleRegister}>
                 Register
             </button>
 
@@ -50,6 +56,23 @@ const NavBar = () => {
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" />
                         <button type="submit">Login</button>
+                    </form>
+                </div>
+            )}
+
+            {showRegister && (
+                <div className="Register-form">
+                    <form>
+                        <h2>Register</h2>
+                        <label htmlFor="username">UserName</label>
+                        <input type="text" name="username" />
+                        <label htmlFor="email">Email</label>
+                        <input type="text" name="email"/>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name="password"/>
+                        <label htmlFor="cofirmPassword">cofirm Password</label>
+                        <input type="password" name="confirmPassword" />
+                        <button type="sumit">Register</button>
                     </form>
                 </div>
             )}
