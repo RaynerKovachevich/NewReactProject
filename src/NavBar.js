@@ -76,7 +76,7 @@ const NavBar = () => {
                         <input type="text" name="email"/>
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password"/>
-                        <label htmlFor="cofirmPassword">cofirm Password</label>
+                        <label htmlFor="cofirmPassword">Confirm Password</label>
                         <input type="password" name="confirmPassword" />
                         <button type="sumit">Register</button>
                     </form>
