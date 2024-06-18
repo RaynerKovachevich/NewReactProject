@@ -447,6 +447,25 @@ h1 {
     padding: 0.6rem 0.9rem; 
     font-size: 1.5rem; 
 }
+
+.login-form, .Register-form {
+  padding: 1.5rem;
+}
+
+}
+
+.login-form h2, .Register-form h2 {
+  font-size: 1.5rem;
+}
+
+.login-form button, .Register-form button {
+  width: 50%;
+  font-size: 14px;
+}
+
+.login-form input, .Register-form input {
+  padding: o.5rem;
+  font-size: 14px;
 }
 
 
@@ -489,5 +508,29 @@ h1 {
     padding: 0.5rem 0.7rem; 
     font-size: 1rem; 
 }
+
+#login-btn {
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+}
+
+.login-form, .Register-form {
+  padding: 1rem;
+}
+
+}
+
+.login-form h2, .Register-form h2 {
+  font-size: 1.25rem;
+}
+
+.login-form button, .Register-form button {
+  width: 75%;
+  font-size: 1rem;
+}
+
+.login-form input, .Register-form input {
+  padding: o.5rem;
+  font-size: 12px;
 }
 

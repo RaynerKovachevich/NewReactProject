@@ -20,10 +20,16 @@ const NavBar = () => {
         setShowRegister(!showRegister);
         setShowLogin(false);
     }
+    
+    const handleHomeClick = () => {
+        window.location.reload();
+    };
+    
+   
 
     return (
         <div className="navbar">
-            <button id="categories-btn" onClick={handleCategoriesClick}>
+            <button id="categories-btn" onClick={handleHomeClick}>
                 Home
             </button>
             
