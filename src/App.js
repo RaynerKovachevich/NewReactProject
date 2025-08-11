@@ -4,7 +4,6 @@ import SearchIcon from './search.svg';
 import MovieCard from "./MovieCard";
 import NavBar from "./NavBar";
 import logo from "./assets/Newlogo.png";
-import SavedMovies from './SavedMovies';
 
 // 861465c7 API key OMDb movie data base
 
@@ -107,10 +106,6 @@ const App = () => {
                     </div>
                 )
             }
-            <div>
-                <h2>Saved Movies</h2>
-                <SavedMovies />
-            </div>
             
             <div>
                 <button className={`Top-btn ${showTopBtn ? 'show' : ''}`} onClick={scrollToTop}>Top</button>
